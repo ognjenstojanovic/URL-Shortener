@@ -17,7 +17,7 @@ namespace UrlShortener.Controllers
         }
 
         [HttpGet("{alias}")]
-        public ActionResult<string> Get(string alias)
+        public IActionResult Get(string alias)
         {
             var shortUrl = dbContext.ShortUrls.FirstOrDefault(url => url.Alias == alias);
 
